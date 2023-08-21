@@ -1,11 +1,11 @@
 let total = 0;
 
 function clickBtn(target){
-    const selectedItemNew = document.getElementById("selctedItem");
+    const listOrdered = document.getElementById('orderedList')
     const itemName = target.children[1].children[1].innerText;
     const li = document.createElement("li");
     li.innerText = itemName;
-    selectedItemNew.appendChild(li);
+    listOrdered.appendChild(li);
 
     const price = target.children[1].children[2].innerText.split(" ")[0];
     total = parseFloat(total) + parseFloat(price);
